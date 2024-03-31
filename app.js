@@ -21,7 +21,7 @@ app.set('view engine', 'ejs');
 app.use('/', require('./backend/server/routes/main'));
 
 //Running the server
-app.listen(PORT, ()=>{
+app.listen(PORT, () => {
     console.log(`App listening at port ${8080}`);
 })
 
