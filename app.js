@@ -6,7 +6,7 @@ const expressLayout = require('express-ejs-layouts');
 
 //Express app instance
 const app = express();
-const PORT = 8080 || process.env.PORT;
+const PORT = process.env.PORT || 8080;
 
 //Static serve
 app.use(express.static('frontend/public'));
@@ -22,7 +22,5 @@ app.use('/', require('./backend/server/routes/main'));
 
 //Running the server
 app.listen(PORT, () => {
-    console.log(`App listening at port ${8080}`);
+    console.log(`App listening at port ${PORT}`);
 })
-
-
