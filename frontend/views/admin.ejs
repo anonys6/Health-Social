@@ -1,0 +1,29 @@
+<aside class="aside">This is the admin part routed through '/admin'. Can be separated into '/register' and '/login'.</aside>
+<main class="main">
+    <div class="register-form">
+        <h3>Register</h3>
+        <form action="/register" method="POST">
+            <div>
+                <label for="name"><strong>Name</strong></label>
+                <input type="text" name="name" id="name" placeholder="Enter Name">
+            </div>
+            <div>
+                <label for="username"><strong>Username</strong></label>
+                <input type="text" name="username" id="username" placeholder="Enter Username">
+            </div>
+            <div>
+                <label for="password"><strong>Password</strong></label>
+                <input type="password" name="password" id="password" placeholder="Enter Password">
+            </div>
+            <div>
+                <label for="cnfmPassword"><strong>Confirm Password</strong></label>
+                <input type="password" name="cnfmPassword" id="cnfmPassword" placeholder="Confirm Password">
+            </div>
+
+            <div>
+                <input type="submit" value="register" class="formBtn">
+                <input type="reset" value="reset" class="formBtn">
+            </div>
+        </form>
+    </div>
+</main>

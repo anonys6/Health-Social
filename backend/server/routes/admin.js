@@ -3,9 +3,9 @@ const router = express.Router();
 
 //Routes
 //GET - 
-router.get('/', (req, res)=>{
+router.get('/admin', (req, res)=>{
     try{
-        res.render('home');
+        res.render('admin');
     } catch(error){
         console.log(error);
     }

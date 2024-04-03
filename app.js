@@ -19,6 +19,7 @@ app.set('view engine', 'ejs');
 
 //Setting the routes source
 app.use('/', require('./backend/server/routes/main'));
+app.use('/', require('./backend/server/routes/admin'));
 
 //Running the server
 app.listen(PORT, () => {
