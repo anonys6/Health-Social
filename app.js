@@ -24,4 +24,5 @@ app.use('/', require('./backend/server/routes/admin'));
 //Running the server
 app.listen(PORT, () => {
     console.log(`App listening at port ${PORT}`);
+    console.log(`URL: http://localhost:${PORT}`);
 })
