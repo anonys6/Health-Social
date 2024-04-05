@@ -3,6 +3,13 @@ require('dotenv').config();
 //Importing packages
 const express = require('express');
 const expressLayout = require('express-ejs-layouts');
+const cookieParser = require('cookie-parser');
+const session = require('express-session');
+const methodOverride = require('method-override');
+const MongoStore = require('connect-mongo');
+
+//Requiring DB
+const connectDB = require('./backend/server/config/db');
 
 //Express app instance
 const app = express();
@@ -11,7 +18,21 @@ const PORT = process.env.PORT || 8080;
 //Static serve
 app.use(express.static('frontend/public'));
 
-//Templating engine and layout
+//Adding middleware
+app.use(express.urlencoded({extended:true})); //To pass data through forms
+app.use(express.json());
+app.use(cookieParser());
+app.use(methodOverride('_method'));
+app.use(session({
+    secret: 'keyboard cat',
+    resave: false,
+    saveUninitialized: true,
+    store: MongoStore.create({
+        mongoUrl: process.env.MONGODB_URI
+    })
+}))
+
+//Templating engines and layouts
 app.use(expressLayout);
 app.set('views', 'frontend/views');
 app.set('layout', './layouts/main');
@@ -21,8 +42,10 @@ app.set('view engine', 'ejs');
 app.use('/', require('./backend/server/routes/main'));
 app.use('/', require('./backend/server/routes/admin'));
 
-//Running the server
-app.listen(PORT, () => {
-    console.log(`App listening at port ${PORT}`);
-    console.log(`URL: http://localhost:${PORT}`);
-})
+//Establishing connection to DB and running the server
+connectDB().then(()=>{
+    app.listen(PORT, () => {
+        console.log(`App listening at port ${PORT}`);
+        console.log(`URL: http://localhost:${PORT}`);
+    });
+});

@@ -84,7 +84,8 @@ div.container {
 }
 
 /* Registration form */
-.main .register-form {
+.main .signup-form,
+.main .login-form {
     border: 1px solid white;
     color: var(--white);
     font-size: 2rem;
