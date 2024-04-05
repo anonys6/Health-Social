@@ -3,7 +3,7 @@
 
 
 /* My variables */
-:root{
+:root {
     --white: #ffffff;
     --black: #000000;
     --dark-green: #143E32;
@@ -14,7 +14,7 @@
     --lora: 'Lora';
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -32,10 +32,10 @@ div.container {
     grid-template-rows: 75px 1fr 100px;
     grid-template-columns: 1fr 1fr;
 
-    grid-template-areas: 
-    "nav nav "
-    "sidebar content"
-    "footer footer";
+    grid-template-areas:
+        "nav nav "
+        "sidebar content"
+        "footer footer";
 
     margin: 10px 10px 10px 10px;
     border-radius: 50px;
@@ -103,24 +103,24 @@ div.container {
     display: flex;
     flex-direction: column;
     gap: 10px;
-} 
+}
 
-.main form div:not(:last-child){ 
+.main form div:not(:last-child) {
     font-size: 1.8rem;
     display: flex;
     justify-content: space-between;
     max-width: 25vw;
 }
 
-.main form div:last-child{
+.main form div:last-child {
     display: flex;
     justify-content: center;
 }
 
-.main form .formBtn{
+.main form .formBtn {
     padding: 10px 20px;
 }
- 
+
 /* Footer */
 .footer {
     grid-area: footer;

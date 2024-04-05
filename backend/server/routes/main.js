@@ -3,10 +3,20 @@ const router = express.Router();
 
 //Routes
 //GET - 
-router.get('/', (req, res)=>{
-    try{
+router.get('/', (req, res) => {
+    try {
         res.render('home');
-    } catch(error){
+    } catch (error) {
+        console.log(error);
+    }
+});
+
+
+//GET - BMI
+router.get('/bmi', (req, res) => {
+    try {
+        res.render('bmi/bmi');
+    } catch (error) {
         console.log(error);
     }
 });
