@@ -11,7 +11,50 @@
 </head>
 
 <body>
-    <h1>this is my bmi index file</h1>
+    <div class="row row-1240">
+        <div class="container-bmi">
+            <h4 class="breadcrumb">Diet & Weight Calculator</h4>
+            <div class="box box-subnav">
+                <img src="https://source.unsplash.com/128x32/?logo" alt="food" class="img-subnav">
+                <h3 class="title-subnav">BMI Calculator</h3>
+            </div>
+
+            <div class="box box-hero">
+                <h1 class="hero--header">BMI Calculator</h1>
+                <p class="hero--sub-header">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores a fugiat saepe eveniet delectus
+                    eligendi harum fugit, asperiores recusandae consequuntur quisquam iusto, laborum dolorum corrupti!
+                    Saepe et alias consequatur! Minus, magni labore natus laborum molestias nostrum! Suscipit
+                    laudantium, ducimus, libero similique sapiente quia totam asperiores repudiandae incidunt laboriosam
+                    dolorem exercitationem.
+                </p>
+            </div>
+
+            <div class="box box-calc">
+                <img src="https://source.unsplash.com/70x70/?icon" alt="weight" class="calc--icon">
+                <h3 class="calc--header">Calculate Your BMI</h3>
+            </div>
+
+            <div class="box box-form">
+                <form action="/bmi" method="POST" class="form">
+                    <div class="form-group">
+                        <div class="calc--height">
+                            <label for="height">Height (cm)</label>
+                            <input type="number" id="height" name="height" placeholder="0 cm">
+                        </div>
+                        <div class="calc--weight">
+                            <label for="weight">Weight (Kg)</label>
+                            <input type="number" id="weight" name="weight" placeholder="0 kg">
+                        </div>
+                        <button type="submit" class="btn btn-calc">Calculate</button>
+                    </div>
+                </form>
+                <div class="bmi--result">
+                    <p>Your BMI result</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </body>
 

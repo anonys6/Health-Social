@@ -5,11 +5,13 @@
 /* My variables */
 :root {
     --white: #ffffff;
+    --white-s2: #f8f8f8;
     --black: #000000;
     --dark-green: #143E32;
     --light-green: #1FDC63;
     --light-bg-1: #C8FACD;
     --light-bg-2: #A6E1FA;
+    --light-bg-3: #edf0ff;
     --dark-bg-1: #121212;
     --dark-bg-2: #282828;
     --poppins: 'Poppins';
@@ -23,13 +25,15 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-size: 10px;
 }
 
 body {
-    font-size: 10px;
-    background-color: var(--light-bg-1);
+    background-color: var(--light-bg-3);
+    font-family: var(--poppins);
 }
 
+/* 
 div.container {
     display: grid;
     height: calc(100vh - 20px);
@@ -40,28 +44,28 @@ div.container {
     grid-template-areas:
         "nav nav "
         "sidebar content"
-        "footer footer";
+        "footer footer"; */
 
-    /* margin: 10px 10px 10px 10px; */
-    margin: 0;
+/* margin: 10px 10px 10px 10px; */
+/* margin: 0;
     border-radius: 50px;
-}
+} */
 
 /* Nav bar */
-.nav {
+/* .nav {
     grid-area: nav;
-    background-color: var(--light-bg-2);
-    /* border: 1px solid white; */
+    background-color: var(--light-bg-2); */
+/* border: 1px solid white; */
+/* border-radius: 0;
     border: none;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-}
+    height: 40px;
+} */
 
-.logo {
+/* .logo {
     border: 1px solid white;
 }
 
@@ -71,27 +75,27 @@ div.container {
     gap: 25px;
     font-size: 2rem;
     color: var(--white);
-}
+} */
 
-/* Aside */
+/* Aside
 .aside {
     grid-area: sidebar;
     background-color: var(--dark-bg-2);
     border: 1px solid white;
 }
 
-/* Main */
+Main
 .main {
     grid-area: content;
     background-color: var(--dark-bg-1);
     /* border: 1px solid white; */
-    height: calc(100vh - 195px);
+/* height: calc(100vh - 195px);
     padding: 15px;
     text-align: justify;
-}
+} */
 
 /* Registration form */
-.main .register-form {
+/* .main .register-form {
     border: 1px solid white;
     color: var(--white);
     font-size: 2rem;
@@ -126,11 +130,159 @@ div.container {
 
 .main form .formBtn {
     padding: 10px 20px;
-}
+} */
 
 /* Footer */
-.footer {
+/* .footer {
     grid-area: footer;
     background-color: var(--light-bg-2);
     position: relative;
+    display: none;
+} */
+
+
+.nav {
+    display: none;
+}
+
+
+
+
+.row {
+    margin: 0 auto;
+}
+
+.row-1240 {
+    max-width: 1240px;
+}
+
+.container-bmi {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.box {
+    background-color: white;
+    padding: 10px;
+}
+
+.breadcrumb {
+    font-size: 1.4rem;
+    font-weight: 400;
+    padding: 20px 5px 15px;
+    color: var(--dark-bg-2);
+}
+
+.box-subnav {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #f8f8f8;
+    margin-bottom: 20px;
+}
+
+.img-subnav {
+    padding-right: 10px;
+    border-right: 1px solid #aaa;
+}
+
+.title-subnav {
+    font-size: 1.8rem;
+    padding-left: 10px;
+}
+
+
+
+.box-hero {
+    background-image: url(/webp/bmi-back.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 44px 60px;
+}
+
+.hero--header {
+    font-size: 3.6rem;
+}
+
+.hero--sub-header {
+    font-size: 1.6rem;
+    /* font-weight: 300; */
+}
+
+.box-calc {
+    padding: 16px 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.calc--icon {
+    padding-right: 10px;
+}
+
+.calc--header {
+    font-size: 2.5rem;
+}
+
+.box-form {
+    padding: 32px 60px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.calc--height,
+.calc--weight {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.calc--height>label,
+.calc--weight>label {
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.calc--height>input,
+.calc--weight>input {
+    background-color: #f8f8f8;
+    border-radius: .5rem;
+    border-color: transparent !important;
+    color: #3557ff !important;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    padding: 5px 8px;
+    text-align: center;
+    width: 70px;
+}
+
+
+.calc--height>input::placeholder,
+.calc--weight>input::placeholder {
+    color: #3557ff !important;
+    font-size: 1.7rem;
+}
+
+.btn-calc {
+    background-color: #b3b3b3;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.8rem;
+    padding: 10px 20px;
+    height: 5rem;
+    align-self: flex-end;
+}
+
+.bmi--result {
+    display: none;
 }
