@@ -283,6 +283,8 @@ Main
     align-self: flex-end;
 }
 
-.bmi--result {
-    display: none;
+.box-result {
+    /* display: none; */
+    display: flex;
 }
+
