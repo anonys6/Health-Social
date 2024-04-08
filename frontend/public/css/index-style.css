@@ -102,14 +102,7 @@ body {
     border: 1px solid white;
     transition: all .5s ease;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: rgba(128, 0, 128, 0.2);
-    padding: 2rem 1.6rem 2rem 5rem;
-    border-radius: 5rem;
-    border: 1px solid white;
-    transition: all 2s ease;
+    
     position: fixed;
     top: 0;
     left: 50%;
