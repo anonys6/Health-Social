@@ -52,7 +52,8 @@ router.post('/login', async(req,res)=>{
         const token = jwt.sign({userId:loginUser._id}, jwtSecret);
         res.cookie('token', token, {httpOnly: true});
         
-        return res.status(200).json({message:'logged in'});
+        // return res.status(200).json({message:'logged in'});
+        res.redirect('/home');
     } catch(error){
         console.log(error);
     }
@@ -75,7 +76,8 @@ router.post('/signup', async(req, res)=>{
 
         try{
             const signupUsers = await user.create({name, username, password:hashedPassword});
-            res.status(201).json({message:"User created", signupUsers});
+            // res.status(201).json({message:"User created", signupUsers});
+            res.redirect('/login');
         } catch(error){
             console.log(error);
         }
