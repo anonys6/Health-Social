@@ -94,6 +94,7 @@ body {
 .navbar {
     display: flex;
     align-items: center;
+    width: 147.5rem;
     justify-content: space-between;
     background-color: rgba(128, 0, 128, 0.2);
     /* opacity: .7; */
@@ -104,7 +105,7 @@ body {
 
     
     position: fixed;
-    top: 0;
+    top: 10px;
     left: 50%;
     transform: translateX(-50%);
 }
