@@ -26,5 +26,8 @@
     "mongoose": "^8.3.0",
     "nodemon": "^3.1.0",
     "socket.io": "^4.7.5"
+  },
+  "devDependencies": {
+    "lite-server": "^2.6.1"
   }
 }

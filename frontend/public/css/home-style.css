@@ -1,0 +1,55 @@
+/* GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap');
+
+
+/* VARIABLES */
+:root {
+    --white: #ffffff;
+    --black: #000000;
+
+    --bg-black: #181818;
+
+    --bg-purple-1: #380356;
+    --dark-purple-1: #6b0078;
+    --dark-purple-2: #93009c;
+
+    --light-purple-1: #b000b2;
+    --light-purple-2: #d500d8;
+
+    --grey-1: #b4b4b4;
+    --grey-2: #a2a2a2;
+    --grey-3: #a7a7a7;
+
+
+    --poppins: 'Poppins';
+    --lora: 'Lora';
+}
+
+
+/* RESET */
+*,
+html,
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--poppins);
+    font-size: 10px;
+    color: var(--black);
+    background-color: var(--white);
+}
+
+
+
+/* NAVIGATION BAR */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
