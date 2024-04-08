@@ -1,6 +1,6 @@
 # Health-Social
 
-Health-Social is a web application built with Node.js, Express, and EJS. It serves static files from the `frontend/public` directory and uses EJS as the templating engine.
+Health-Social is a web application built with Node.js, Express, EJS, and Socket.io. It serves static files from the `frontend/public` directory and uses EJS as the templating engine. The application also includes a chat feature powered by Socket.io.
 
 ## Running the Application
 
@@ -13,8 +13,8 @@ The application will start on port 8080 or the port specified in your `.env` fil
 
 ## Application Structure
 
-- `app.js`: The entry point to our application. This file defines our express server. It also requires the routes we'll be using in the application.
-- `backend/server/routes/`: This folder contains the route definitions for our app.
+- `app.js`: The entry point to our application. This file defines our express server and sets up Socket.io. It also requires the routes we'll be using in the application.
+- `backend/server/routes/`: This folder contains the route definitions for our app. The routes include a home page, a chat page, and a BMI calculator page.
 - `frontend/public/`: This folder contains static files like CSS and JavaScript files.
 - `frontend/views/`: This folder contains EJS templates that our app will use.
 
@@ -35,4 +35,4 @@ npm install
 npm start
 ```
 
-Then open your browser and visit `http://localhost:8080`.
+Then open your browser and visit `http://localhost:8080/` to view the application.
