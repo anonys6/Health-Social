@@ -1,9 +1,9 @@
-/* GOOGLE FONTS */
+/*********************** GOOGLE FONTS ***********************/
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap');
 
 
-/* VARIABLES */
+/*********************** VARIABLES ***********************/
 :root {
     --white: #ffffff;
     --black: #000000;
@@ -28,7 +28,7 @@
 }
 
 
-/* RESET */
+/*********************** RESET ***********************/
 *,
 html {
     padding: 0;
@@ -65,10 +65,31 @@ li {
 } */
 
 
+/*********************** MAIN ***********************/
+body {
+    background: linear-gradient(-45deg, var(--bg-black), var(--light-purple-1), var(--bg-black), var(--light-purple-1));
+    background-size: 200% 200%;
+    animation: gradient 15s ease infinite;
+    padding: 2rem 4rem 0;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
 
 
-/* NAVIGATION BAR */
 
+/*************** NAVIGATION BAR ***************/
 .navbar {
     display: flex;
     align-items: center;
@@ -118,12 +139,12 @@ li {
     text-decoration: underline
 }
 
-/* STICKY NAVBAR */
+
+/*********************** STICKY NAVBAR ***********************/
 .navbar-sticky {
     margin: 0 auto;
     margin-top: 2rem;
     max-width: 75%;
-    
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -134,41 +155,7 @@ li {
 }
 
 
-/* body {
-    background: linear-gradient(-45deg, #97D9E1, #D9AFD9, #97D9E1, #D9AFD9);
-    background-size: 200% 200%;
-    animation: gradient 15s ease infinite;
-    padding: 1rem 2rem 0;
-} */
 
-
-
-
-
-
-
-
-
-body {
-    background: linear-gradient(-45deg, var(--bg-black), var(--light-purple-1), var(--bg-black), var(--light-purple-1));
-    background-size: 200% 200%;
-    animation: gradient 15s ease infinite;
-    padding: 2rem 4rem 0;
-}
-
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }
-}
 
 main>div {
     padding: 7rem 2rem;
@@ -180,6 +167,7 @@ main>div {
 
 
 
+/*********************** SCROLLBAR ***********************/
 ::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
@@ -208,3 +196,4 @@ main>div {
     border: 1px solid rgba(255, 255, 255, .5);
 
 }
+
