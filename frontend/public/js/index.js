@@ -5,8 +5,11 @@ window.addEventListener('scroll', function () {
     const endWidth = 1000;
     const scrollPercent = Math.min(1, window.pageYOffset / scrollLimit);
     const newWidth = startWidth - ((startWidth - endWidth) * scrollPercent);
-    // const top = ;
 
     navbar.style.top = `${25}px`;
-    navbar.style.width = `${newWidth}px`; // decrease width as you scroll down
+    if (newWidth < 1050) {
+        navbar.style.cssText = `width: ${newWidth}px; border:none; background-color: rgba(0, 0, 0, 0.3); top:${scrollLimit - 30}px;`;
+    } else {
+        navbar.style.cssText = `width: ${newWidth}px; border: 1px solid white; background-color: rgba(128, 0, 128, 0.2); top:${scrollLimit - 40}px;`;
+    }
 });
