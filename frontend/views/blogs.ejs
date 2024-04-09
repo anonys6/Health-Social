@@ -1,0 +1,21 @@
+<main>
+    <div>
+        This is blogs page.
+
+    </div>
+    <a href="/add-blogpost">Add blog</a>
+
+    
+    <ul class="articles-ul">
+
+        <% data.forEach(element => { %>
+            <li>
+                <a href="/post/<%= element._id %>">
+                    <span><%= element.title %></span>
+                    <span class="articles-list-date"><%= element.createdAt.toDateString() %></span>
+                </a>
+            </li>
+        <% }) %>
+
+    </ul>
+</main>

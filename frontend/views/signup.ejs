@@ -2,7 +2,7 @@
 <main class="main">
     <div class="signup-form">
         <h3>Signup</h3>
-        <form action="/signup" method="POST">
+        <form action="/signup" method="POST" enctype="multipart/form-data">
             <div>
                 <label for="name"><strong>Name</strong></label>
                 <input type="text" name="name" id="name" placeholder="Enter Name">
@@ -14,6 +14,10 @@
             <div>
                 <label for="password"><strong>Password</strong></label>
                 <input type="password" name="password" id="password" placeholder="Enter Password">
+            </div>
+            <div>
+                <label for="photo"><strong>Profile Pic</strong></label>
+                <input type="file" name="photo" id="photo" accept="image/*">
             </div>
             <div>
                 <label for="cnfmPassword"><strong>Confirm Password</strong></label>

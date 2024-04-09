@@ -16,13 +16,13 @@ router.get('/', (req, res) => {
 });
 
 //GET - HOME
-router.get('/home',(req,res)=>{
-    try{
-        res.render('home');
-    } catch(error){
-        console.log(error);
-    }
-})
+// router.get('/home', authMiddleware, (req,res)=>{
+//     try{
+//         res.render('home');
+//     } catch(error){
+//         console.log(error);
+//     }
+// })
 
 //GET - CHAT
 router.get('/chat', (req,res)=>{
@@ -43,7 +43,19 @@ router.get('/bmi', (req, res) => {
 });
 
 
+/*-----------------------------------------*/
+//Routes for blogposts
+router.get('/blogpost/:id', async(req, res)=>{
+    try {
+        // const blogPost = await BlogPost.findById(req.params.id).populate('author');
+        let slug = req.params.id;
+        const blogPost = await blogPost.findOne({slug: slug});
 
+        res.render('blogPost/blogpost');
+    } catch(error){
+        console.log(error);
+    }
+})
 
 
 
