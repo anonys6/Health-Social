@@ -6,8 +6,9 @@ const path = require('path');
 const multer = require('multer');
 
 //Models
+// const user = require('../models/user');
 const user = require('../models/user');
-const blogPost = require('../models/blogpost');
+const blogpost = require('../models/blogpost');
 
 //JWT secret
 const jwtSecret = process.env.JWT_SECRET;
@@ -33,7 +34,7 @@ const upload = multer({storage: storage});
 //GET - signup
 router.get('/signup', (req,res)=>{
     try{
-        res.render('signup');
+        res.render('signup', {layout: mainLayout});
     } catch(error){
         console.log(error);
     }
@@ -125,8 +126,8 @@ router.post('/login', async(req,res)=>{
 //GET - Logout
 router.get('/logout', (req,res)=>{
     res.clearCookie('token');
-    res.send({message:'Logged out'});
-    // res.redirect('/login');
+    // res.send({message:'Logged out'});
+    res.redirect('/');
 });
 
 
@@ -136,7 +137,7 @@ router.get('/logout', (req,res)=>{
 //GET - Home
 router.get('/home', authMiddleware, (req,res)=>{
     try{
-        res.render('home');
+        res.render('home', {layout: mainLayout});
     } catch(error){
         console.log(error);
     }
@@ -146,8 +147,8 @@ router.get('/home', authMiddleware, (req,res)=>{
 router.get('/blogs', authMiddleware, async(req,res)=>{
     try{
         // const allBlogPosts = await blogPost.find().populate('author');
-        const blogPosts = await blogPost.find();
-        res.render('blogs', {data:blogPosts ,layout : mainLayout});
+        const blogposts = await blogpost.find();
+        res.render('blogs', {data:blogposts ,layout : mainLayout});
     } catch(error){
         console.log(error);
     }
@@ -165,13 +166,13 @@ router.get('/add-blogpost', authMiddleware, (req,res)=>{
 //POST - Add Blogpost
 router.post('/add-blogpost', authMiddleware, async(req,res)=>{
     try{
-        const newBlogPost = new blogPost({
+        const newBlogpost = new blogpost({
             title: req.body.title,
             content: req.body.content,
             author: req.user._id,
         });
         // await newBlogPost.save();
-        await blogPost.create(newBlogPost);
+        await blogpost.create(newBlogpost);
         res.redirect('/blogs');
     } catch(error){
         console.log(error);

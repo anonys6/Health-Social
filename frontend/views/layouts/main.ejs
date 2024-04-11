@@ -8,17 +8,18 @@
         <%= locals.title %>
     </title>
     <meta name="description" content="<%= locals.desc %>">
-    <link rel="stylesheet" href="/css/main-style.css">
-    <script type="text/javascript" defer src="/js/script.js"></script>
+    <link rel="stylesheet" href="/css/home-style.css">
 </head>
 
 <body>
-    <div class="container">
-        <%- include('../partials/header.ejs') %>
-            <%- body %>
-        <%- include('../partials/footer.ejs') %>
-    </div>
+    <%- include('../partials/header.ejs') %>
+        <%- body %>
+    <%- include('../partials/footer.ejs') %>
 
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script type="text/javascript" src="/js/index.js"></script>
 </body>
 
 </html>

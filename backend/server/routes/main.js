@@ -1,6 +1,9 @@
 const express = require('express');
 const router = express.Router();
 
+//Models
+const blogpost = require('../models/blogpost');
+
 //Layouts
 const indexLayout = '../views/layouts/index-layout';
 const chatLayout = '../views/layouts/chat-layout';
@@ -22,16 +25,7 @@ router.get('/', (req, res) => {
 //     } catch(error){
 //         console.log(error);
 //     }
-// })
-
-//GET - CHAT
-router.get('/chat', (req,res)=>{
-    try{
-        res.render('chat/chat', {layout: chatLayout});
-    } catch(error){
-        console.log(error);
-    }
-})
+// });
 
 //GET - BMI
 router.get('/bmi', (req, res) => {
@@ -45,19 +39,27 @@ router.get('/bmi', (req, res) => {
 
 /*-----------------------------------------*/
 //Routes for blogposts
-router.get('/blogpost/:id', async(req, res)=>{
-    try {
-        // const blogPost = await BlogPost.findById(req.params.id).populate('author');
-        let slug = req.params.id;
-        const blogPost = await blogPost.findOne({slug: slug});
+// router.get('/blogpost/:id', async(req, res)=>{
+//     try {
+//         // const blogPost = await BlogPost.findById(req.params.id).populate('author');
+//         let slug = req.params.id;
+//         const blogposts = await blogpost.findOne({slug: slug});
 
-        res.render('blogPost/blogpost');
-    } catch(error){
+//         res.render('blogPost/blogpost');
+//     } catch(error){
+//         console.log(error);
+//     }
+// })
+
+//GET - BLOGPOST
+router.get('/blogpost/:id', async (req, res) => {
+    try {
+        let slug = req.params.id;
+        const blogposts = await blogpost.findById({_id: slug});
+        res.render('blogPost/blogpost', { data: blogposts });
+    } catch (error) {
         console.log(error);
     }
-})
-
-
-
+});
 
 module.exports = router;
