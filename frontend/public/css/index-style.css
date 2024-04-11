@@ -1,9 +1,9 @@
-/* GOOGLE FONTS */
+/*********************** GOOGLE FONTS ***********************/
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap');
 
 
-/* VARIABLES */
+/*********************** VARIABLES ***********************/
 :root {
     --white: #ffffff;
     --black: #000000;
@@ -28,7 +28,7 @@
 }
 
 
-/* RESET */
+/*********************** RESET ***********************/
 *,
 html {
     padding: 0;
@@ -54,22 +54,31 @@ li {
     list-style: none;
 }
 
-/* NAVIGATION BAR */
-nav {
-    position: sticky;
-    top: 2rem;
+
+/* ROWS */
+/* .row {
+    margin: 0 auto;
 }
+
+.row-1340 {
+    max-width: 1340px;
+} */
+
+
+
+
+/* NAVIGATION BAR */
 
 .navbar {
     display: flex;
     align-items: center;
+    width: 147.5rem;
     justify-content: space-between;
     background-color: rgba(128, 0, 128, 0.2);
     /* opacity: .7; */
     padding: 2rem 1.6rem 2rem 5rem;
     border-radius: 5rem;
     border: 1px solid white;
-    transition: all ease-out 1.5s;
 }
 
 .navbar--list {
@@ -111,54 +120,19 @@ nav {
 }
 
 
-/* STICKY NAVBAR */
+
+/*********************** STICKY NAVBAR ***********************/
 .navbar-sticky {
     margin: 0 auto;
     max-width: 75%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.3);
     padding: 2rem 1.6rem 2rem 5rem;
     border-radius: 5rem;
     border: none;
-    /* transition: all ease-in-out 0.5s; */
-    transition: all ease-in-out 1.5s;
 }
-
-/* Define the keyframes animation for down*/
-@keyframes nav-animation-down {
-    0% {
-        max-width: 100%;
-    }
-    100% {
-        max-width: 75%;
-    }
-}
-.animate-nav-down {
-    animation-name: nav-animation-down; 
-    animation-duration: 0.5s; 
-    animation-timing-function: ease-out; 
-    animation-fill-mode: forwards;
-}
-
-/* Define the keyframes animation for Up*/
-@keyframes nav-animation-up {
-    0% {
-        max-width: 75%;
-    }
-    100% {
-        max-width: 100%;
-    }
-}
-.animate-nav-up {
-    animation-name: nav-animation-up; 
-    animation-duration: 0.5s; 
-    animation-timing-function: ease-out; 
-    animation-fill-mode: forwards;
-}
-
-
 
 
 /* body {
@@ -167,6 +141,14 @@ nav {
     animation: gradient 15s ease infinite;
     padding: 1rem 2rem 0;
 } */
+
+
+
+
+
+
+
+
 
 body {
     background: linear-gradient(-45deg, var(--bg-black), var(--light-purple-1), var(--bg-black), var(--light-purple-1));
@@ -199,6 +181,7 @@ main>div {
 
 
 
+/*********************** SCROLLBAR ***********************/
 ::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
@@ -228,3 +211,4 @@ main>div {
     border: 1px solid rgba(255, 255, 255, .5);
 
 }
+
