@@ -29,8 +29,7 @@
 
 
 /*********************** RESET ***********************/
-*,
-html {
+*{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -176,6 +175,7 @@ body {
 /*********************** MAIN ***********************/
 main {
     margin: 15rem 5rem 0 5rem;
+    width: calc(100% - 10rem);
 }
 
 /*********************** LOGIN ***********************/
@@ -344,10 +344,41 @@ pre {font-family: var(--poppins);}
 .footer{
     background-color: var(--bg-black-2);
     margin-top: 10rem;
-    color: white;
+    color: #ffffff;
     border-top-left-radius: 15rem;
+    background-color: var(--bg-black);
 }
 
 .footer-content{
+    position: relative;
+    height: 500px;
     padding: 10rem;
+}
+
+.footer-content .heading{
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.footer-content .links{
+    position: absolute;
+    z-index: 10;
+    border: 1px solid white;
+    margin-top: 5rem;
+    display: flex;
+    font-size: 1.5rem;
+    gap: 5rem;
+}
+
+.links a:hover{
+    text-decoration: underline;
+
+}
+/***********************PARTICLES***********************/
+
+div#tsparticles {
+    position: absolute;
+    top: 0;
+    width: calc(100% - 10rem);
+    border-top-left-radius: 15rem;
 }
