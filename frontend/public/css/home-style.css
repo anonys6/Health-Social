@@ -277,10 +277,23 @@ main {
     border-radius: 5rem;
 }
 
+@keyframes opacity {
+    0%{
+        opacity: 0;
+    } 100% {
+        opacity: 1;
+    }
+}
+
+.opacity{
+    animation: opacity 1.5s ease forwards;
+}
+
 #signupTarget {
     margin: 5rem 0;
     font-size: 3.5rem;
     font-family: var(--lora);
+    opacity: 0;
 }
 
 #signupTarget a {
@@ -508,10 +521,11 @@ div#tsparticles {
 #addNewButton a span {
     transition: transform 0.3s ease;
     display: inline-block;
+    transform: scale(1.5);
 }
 
 #addNewButton a:hover span{
-    transform: rotate(90deg);
+    transform: rotate(90deg) scale(1.5);
 }
 
 .blogs-content {
@@ -644,10 +658,7 @@ div#tsparticles {
 .editBlogPost .heading .backButton:hover span{
     display: inline-block;
     animation: arrow 0.5s ease 2 forwards;
-    animation: name duration timing-function delay iteration-count direction fill-mode;
 }
-
-
 
 .editBlogPost .heading input{
     background-color: var(--light-purple-1);

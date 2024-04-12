@@ -87,6 +87,19 @@ $(document).ready(function () {
         {
             offset: '60%',
         });
+
+    $('.login-form .formBtn').waypoint(function (direction) {
+        if (direction == "down") {
+            // $('#signupTarget').addClass('fadein-down')
+            $('#signupTarget').addClass('opacity')
+        } else {
+            // $('#signupTarget').removeClass('fadein-down');
+            $('#signupTarget').removeClass('opacity');
+        }
+    },
+        {
+            offset: '60%',
+        });
 });
 
 
