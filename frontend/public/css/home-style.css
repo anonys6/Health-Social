@@ -182,7 +182,8 @@ main {
 .login-heading{
     font-size: 6rem;
     font-family: var(--lora);
-    margin-left: 15%;
+    margin: 20rem 0;
+    margin-left: 17.5%;
 }
 
 .login-form{
@@ -191,20 +192,102 @@ main {
     border-radius: 2rem;
 }
 
+.border-left{
+    border-left: 2px solid var(--light-purple-1);
+}
+
+.hr-wrapper{
+    margin-top: 1rem;
+}
+
+.login-form hr{
+    border: none;
+    height: 2px;
+    background-color: var(--light-purple-1);
+    margin-top: 1rem;
+    /* transform: translateX(); */
+}
+
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+        transform: translateX(-100vw);
+    } 100%{
+        opacity: 1;
+        transform: translateX(0vw);
+    }
+}
+
+.fadein-down {
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
 .login-form form{
     display: flex;
     flex-direction: column;
     padding: 2rem;
-    color: var(--black);
+    color: var(--grey-3);
+    margin-left: 16.5%;
 }
 
-.login-form form input[type="text"],
-.login-form form input[type="password"]{
+
+.login-form form .text{
+    font-size: 7rem;
+    color: var(--black);
+    margin: 7rem 3rem 10rem 0;
+    font-family: var(--lora);
+    opacity: 0;
+}
+
+
+
+.login-form form .wrapper{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem 10rem;
+    opacity: 0;
+}
+
+.login-form form .wrapper div{
+    display: flex;
+    align-items: center;
+    gap: 10rem;
+    justify-content: space-between;
+}
+
+.login-form form label{
+    font-size: 2rem;
+    margin: 1rem 0;
+    max-width: fit-content;
+}
+
+
+.login-form form .wrapper input{
     margin: 1rem 0;
     padding: 1rem 2rem;
-    width: 50rem;
-    border: 1px solid var(--grey-1);
-    border-radius: 5px;
+    width: 22vw;
+    height: 5rem;
+    border: 1px solid var(--grey-3);
+    border-radius: 5rem;
+}
+
+#signupTarget {
+    margin: 5rem 0;
+    font-size: 3.5rem;
+    font-family: var(--lora);
+}
+
+#signupTarget a {
+    color: var(--light-purple-1);
+    border: 1px solid var(--light-purple-1);
+    border-radius: 5rem;
+    padding: 1rem 2rem;
+    margin-left: 1rem;
+}
+
+#signupTarget a:hover {
+    background-color: var(--light-purple-1);
+    color: var(--white);
 }
 
 /*********************** SIGNUP ***********************/
@@ -313,6 +396,8 @@ pre {font-family: var(--poppins);}
     border-radius: 5rem;
 }
 
+
+/******************** FORM BUTTONS **********************/
 .formBtn{
     display: flex;
     margin-top: 5rem;
@@ -374,6 +459,7 @@ pre {font-family: var(--poppins);}
     text-decoration: underline;
 
 }
+
 /***********************PARTICLES***********************/
 
 div#tsparticles {
@@ -381,4 +467,123 @@ div#tsparticles {
     top: 0;
     width: calc(100% - 10rem);
     border-top-left-radius: 15rem;
+}
+
+/*********************** BLOGS **************************/
+.blogs-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.blogs-wrapper .heading {
+    font-size: 4rem;
+    font-family: var(--lora);
+}
+
+.blogs-wrapper #addNewButton a{
+    font-size: 3rem;
+    color: var(--white);
+    border: 1px solid var(--white);
+    padding: 1rem 2rem;
+    border-radius: 5rem;
+}
+
+#addNewButton a:hover{
+    background-color: var(--light-purple-2);
+    transition: transform 0.3s ease;
+}
+
+#addNewButton a span {
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+#addNewButton a:hover span{
+    transform: rotate(90deg);
+}
+
+.blogs-content {
+    background-color: var(--white);
+    border-radius: 2rem;
+    margin: 5rem 0;
+}
+
+.blogs li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.blog-title {
+    text-decoration: underline;
+    color: black;
+    font-size: 4rem;
+}
+
+.blog-buttons {
+    display: flex;
+    gap: 5rem;
+}
+
+.blog-buttons .btn{
+    border: 1px solid var(--light-purple-1);
+    font-size: 2rem;
+    color: var(--light-purple-1);
+    cursor: pointer;
+
+}
+
+.blog-buttons a,
+.blog-buttons input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4rem;
+    width: 8rem;
+    background-color: var(--white);
+}
+
+/****************** ADD BLOG POST ****************/
+.addBlogPost {
+    background-color: var(--bg-black);
+    border-radius: 2rem;
+    padding: 2rem 4rem;
+}
+
+.addBlogPost .heading {
+    font-size: 5rem;
+    font-family: var(--lora);
+}
+
+.addBlogPost form {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    margin: 5rem 0;
+}
+
+.addBlogPost form div:not(:last-child) {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.addBlogPost form div label {
+    font-size: 2rem;
+}
+
+.addBlogPost form div input {
+    height: 4rem;
+}
+
+.addBlogPost .btn{
+    padding: 1rem 4rem;
+    border-radius: 5rem;
+    cursor: pointer;
 }

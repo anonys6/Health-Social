@@ -17,6 +17,7 @@ window.addEventListener('scroll', function () {
 
 
 $(document).ready(function () {
+    //Signup form
     $('.signup-form hr').waypoint(function (direction) {
         if (direction == "down") {
             $('.signup-form form .text').addClass('fadein-down');
@@ -47,6 +48,40 @@ $(document).ready(function () {
             $('.signup-form form .formBtn').addClass('fadein-down');
         } else {
             $('.signup-form form .formBtn').removeClass('fadein-down');
+        }
+    },
+        {
+            offset: '60%',
+        });
+
+    //Login form
+    $('.login-form hr').waypoint(function (direction) {
+        if (direction == "down") {
+            $('.login-form form .text').addClass('fadein-down');
+        } else {
+            $('.login-form form .text').removeClass('fadein-down');
+        }
+    },
+        {
+            offset: '50%',
+        });
+
+    $('.login-form .text').waypoint(function (direction) {
+        if (direction == "down") {
+            $('.login-form form .wrapper').addClass('fadein-down');
+        } else {
+            $('.login-form form .wrapper').removeClass('fadein-down');
+        }
+    },
+        {
+            offset: '50%',
+        });
+
+    $('.login-form .wrapper').waypoint(function (direction) {
+        if (direction == "down") {
+            $('.login-form form .formBtn').addClass('fadein-down');
+        } else {
+            $('.login-form form .formBtn').removeClass('fadein-down');
         }
     },
         {

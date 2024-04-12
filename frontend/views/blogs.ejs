@@ -1,20 +1,30 @@
 <main>
-
-    <div>
-        This is blogs page.
+    <div class="blogs-wrapper">
+        <div class="heading">
+            <pre>Blogs -
+Write you heart out...</pre>
+        </div>
+        <div id="addNewButton">
+            <a href="/add-blogpost">Add blog <span>+</span></a>
+        </div>
     </div>
-    
-    <a href="/add-blogpost">Add blog</a>
-    
-    <ul>
-        <% data.forEach(element => { %>
-            <li>
-                <a href="/blogpost/<%= element._id %>">
-                    <span><%= element.title %></span>
-                    <span class="articles-list-date"><%= element.createdAt.toDateString() %></span>
-                </a>
-            </li>
-        <% }) %>
-    </ul>
 
+    <div class="blogs-content">
+        <ul class="blogs">
+            <% data.forEach(element=> { %>
+                <li>
+                    <a href="/blogpost/<%= element._id %>" class="blog-title">
+                        <%= element.title %> &nearr;
+                    </a>
+                    <div class="blog-buttons">
+                        <a href="/edit-post/<%= element._id %>" class="btn">Edit</a>
+
+                        <form action="/delete-post/<%= element._id %>?_method=DELETE" method="POST">
+                            <input type="submit" value="Delete" class="btn" id="deleteBtn">
+                        </form>
+                    </div>
+                </li>
+                <% }) %>
+        </ul>
+    </div>
 </main>
