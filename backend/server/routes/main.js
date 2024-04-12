@@ -39,17 +39,6 @@ router.get('/bmi', (req, res) => {
 
 /*-----------------------------------------*/
 //Routes for blogposts
-// router.get('/blogpost/:id', async(req, res)=>{
-//     try {
-//         // const blogPost = await BlogPost.findById(req.params.id).populate('author');
-//         let slug = req.params.id;
-//         const blogposts = await blogpost.findOne({slug: slug});
-
-//         res.render('blogPost/blogpost');
-//     } catch(error){
-//         console.log(error);
-//     }
-// })
 
 //GET - BLOGPOST
 router.get('/blogpost/:id', async (req, res) => {

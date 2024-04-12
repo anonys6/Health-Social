@@ -1,0 +1,28 @@
+<main>
+    <div class="editBlogPost">
+        <div class="heading">
+            <div class="backButton"><button><a href="/blogs"><span>&larr;</span> Back</a></button></div>
+            <div>Edit Blog</div>
+
+            <form action="/delete-blogpost/<%= data._id %>?_method=DELETE" method="POST">
+                <div class="deleteBtn"><input type="submit" value="Delete "><span> +</span></div>
+            </form>
+        </div>
+
+
+        <form action="/edit-blogpost/<%- data._id %>?_method=PUT" method="POST">
+            <div>
+                <label for="title"><strong>Title</strong></label>
+                <input type="text" placeholder="Enter the title" name="title" value="<%= data.title %>">
+            </div>
+            <div>
+                <label for="content"><strong>Content</strong></label>
+                <textarea name="content" id="content" cols="50" rows="10"><%= data.content %></textarea>
+            </div>
+            <div>
+                <input type="submit" value="Update" class="btn">
+            </div>
+        </form>
+
+    </div>
+</main>

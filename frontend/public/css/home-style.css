@@ -53,7 +53,13 @@ li {
     list-style: none;
 }
 
+input::placeholder, textarea::placeholder {
+    font-family: var(--poppins);
+}
 
+input,textarea {
+    font-family: var(--poppins);
+}
 /* ROWS */
 /* .row {
     margin: 0 auto;
@@ -449,7 +455,6 @@ pre {font-family: var(--poppins);}
     position: absolute;
     z-index: 10;
     border: 1px solid white;
-    margin-top: 5rem;
     display: flex;
     font-size: 1.5rem;
     gap: 5rem;
@@ -458,6 +463,10 @@ pre {font-family: var(--poppins);}
 .links a:hover{
     text-decoration: underline;
 
+}
+
+.info {
+    margin-top: 15rem;
 }
 
 /***********************PARTICLES***********************/
@@ -533,6 +542,7 @@ div#tsparticles {
 
 .blog-buttons .btn{
     border: 1px solid var(--light-purple-1);
+    border-radius: 2rem;
     font-size: 2rem;
     color: var(--light-purple-1);
     cursor: pointer;
@@ -547,6 +557,15 @@ div#tsparticles {
     height: 4rem;
     width: 8rem;
     background-color: var(--white);
+}
+
+/******************** BLOG POST ******************/
+.blogpost h1 {
+    font-size: 5rem;
+}
+
+.blogpost article{
+    font-size: 3rem;
 }
 
 /****************** ADD BLOG POST ****************/
@@ -586,4 +605,107 @@ div#tsparticles {
     padding: 1rem 4rem;
     border-radius: 5rem;
     cursor: pointer;
+    background-color: var(--light-purple-1);
+    color: var(--white);
 }
+
+
+/***************** EDIT BLOG POST ****************/
+.editBlogPost {
+    background-color: var(--bg-black);
+    border-radius: 2rem;
+    padding: 2rem 4rem;
+}
+
+.editBlogPost .heading {
+    font-size: 5rem;
+    font-family: var(--lora);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.editBlogPost .heading button {
+    font-size: 3rem;
+    background-color: var(--light-purple-1);
+    padding: 1rem 2rem;
+    border-radius: 5rem;
+}
+
+@keyframes arrow {
+    0% {
+        transform: translateX(2px);
+    }
+    100% {
+        transform: translateX(-10px);
+    }
+}
+
+.editBlogPost .heading .backButton:hover span{
+    display: inline-block;
+    animation: arrow 0.5s ease 2 forwards;
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+}
+
+
+
+.editBlogPost .heading input{
+    background-color: var(--light-purple-1);
+    border: none;
+    color: var(--white);
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+.editBlogPost .heading .deleteBtn:hover span{
+    transform: rotate(135deg) scale(1.5);
+}
+.editBlogPost .heading .deleteBtn span {
+    transform: rotate(45deg) scale(1.5);
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.editBlogPost .heading .deleteBtn{
+    font-size: 3rem;
+    padding: 1rem 2rem;
+    border-radius: 5rem;
+    background-color: var(--light-purple-1);
+    color: var(--white);
+    cursor: pointer;
+}
+
+.editBlogPost form {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    margin: 3rem 0;
+}
+
+.editBlogPost form div:not(:last-child) {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.editBlogPost form div label {
+    font-size: 2.5rem;
+}
+
+.editBlogPost form div input {
+    height: 4rem;
+}
+
+.editBlogPost input.btn{
+    font-size: 2rem;
+    padding: 0rem 4rem;
+    /* display: flex;
+    align-self: center;
+    justify-content: center; */
+    border-radius: 5rem;
+    margin: auto;
+    cursor: pointer;
+    background-color: var(--light-purple-1);
+    color: var(--white);
+}
+

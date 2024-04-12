@@ -86,7 +86,6 @@ const authMiddleware = async(req,res,next)=>{
     }
 }
 
-
 //GET - Login
 router.get('/login', (req, res)=>{
     try{
@@ -180,7 +179,42 @@ router.post('/add-blogpost', authMiddleware, async(req,res)=>{
 });
 
 
+//GET- Edit blogpost
+router.get('/edit-blogpost/:id', authMiddleware, async(req,res)=>{
+    try{
+        const data = await blogpost.findOne({_id: req.params.id});
 
+        res.render('blogPost/edit-blogpost', {data});
+    } catch(error){
+        console.log(error);
+    }
+});
+
+
+//PUT - Edit blogpost
+router.put('/edit-blogpost/:id', authMiddleware, async(req,res)=>{
+    try{
+        await blogpost.findByIdAndUpdate(req.params.id, {
+            title: req.body.title,
+            content: req.body.content,
+            updatedAt: Date.now()
+        });
+        res.redirect('/blogs');
+    } catch(error){
+        console.log(error);
+    }
+});
+
+
+//DELETE - Delete blogpost
+router.delete('/delete-blogpost/:id', authMiddleware, async(req, res)=>{
+    try{
+        await blogpost.deleteOne({_id: req.params.id});
+        res.redirect('/blogs');
+    } catch(error){
+        console.log(error);
+    }
+});
 
 
 

@@ -17,9 +17,9 @@ Write you heart out...</pre>
                         <%= element.title %> &nearr;
                     </a>
                     <div class="blog-buttons">
-                        <a href="/edit-post/<%= element._id %>" class="btn">Edit</a>
+                        <a href="/edit-blogpost/<%= element._id %>" class="btn">Edit</a>
 
-                        <form action="/delete-post/<%= element._id %>?_method=DELETE" method="POST">
+                        <form action="/delete-blogpost/<%= element._id %>?_method=DELETE" method="POST">
                             <input type="submit" value="Delete" class="btn" id="deleteBtn">
                         </form>
                     </div>
