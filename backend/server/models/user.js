@@ -11,11 +11,15 @@ const UserSchema = new Schema({
         required: true,
         unique: true,
     },
+    photo: {
+        type : String,
+        required: true,
+    },
     password: {
         type: String,
         required: true,
     }
 });
 
-module.exports = mongoose.model('user', UserSchema);
+module.exports = mongoose.model('User', UserSchema);
 

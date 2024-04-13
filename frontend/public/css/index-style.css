@@ -65,31 +65,9 @@ li {
 } */
 
 
-/*********************** MAIN ***********************/
-body {
-    background: linear-gradient(-45deg, var(--bg-black), var(--light-purple-1), var(--bg-black), var(--light-purple-1));
-    background-size: 200% 200%;
-    animation: gradient 15s ease infinite;
-    padding: 2rem 4rem 0;
-}
-
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }
-}
 
 
-
-/*************** NAVIGATION BAR ***************/
+/* NAVIGATION BAR */
 
 .navbar {
     display: flex;
@@ -101,13 +79,6 @@ body {
     padding: 2rem 1.6rem 2rem 5rem;
     border-radius: 5rem;
     border: 1px solid white;
-    transition: all .5s ease;
-
-    
-    position: fixed;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
 }
 
 .navbar.blurred::before {
@@ -157,15 +128,15 @@ body {
     transition: all ease-in .2s;
 }
 
-.navbar--list>li>a:hover{
-    text-decoration: underline
+.navbar--list>li:not(:last-child)>a:hover{
+    text-decoration: underline;
 }
+
 
 
 /*********************** STICKY NAVBAR ***********************/
 .navbar-sticky {
     margin: 0 auto;
-    margin-top: 2rem;
     max-width: 75%;
     display: flex;
     align-items: center;
@@ -174,21 +145,44 @@ body {
     padding: 2rem 1.6rem 2rem 5rem;
     border-radius: 5rem;
     border: none;
-
-    position: fixed;
-    top: 25px;
-    left: 200px;
-    width: 100%;
-    height: 50px; /* or whatever height you want */
-    background-color: rgba(0, 0, 0, 0.3);
-}
-
-main {
-    margin-top: 10rem;
-
 }
 
 
+/* body {
+    background: linear-gradient(-45deg, #97D9E1, #D9AFD9, #97D9E1, #D9AFD9);
+    background-size: 200% 200%;
+    animation: gradient 15s ease infinite;
+    padding: 1rem 2rem 0;
+} */
+
+
+
+
+
+
+
+
+
+body {
+    background: linear-gradient(-45deg, var(--bg-black), var(--light-purple-1), var(--bg-black), var(--light-purple-1));
+    background-size: 200% 200%;
+    animation: gradient 15s ease infinite;
+    padding: 2rem 4rem 0;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
 
 main>div {
     padding: 7rem 2rem;
@@ -205,7 +199,8 @@ main>div {
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
     /* background-color: #F5F5F5; */
-    background: linear-gradient(-45deg, #97D9E1, #D9AFD9, #97D9E1, #D9AFD9);
+    /* background: linear-gradient(-45deg, #97D9E1, #D9AFD9, #97D9E1, #D9AFD9); */
+    background: linear-gradient(-45deg, var(--bg-black), var(--light-purple-1), var(--bg-black), var(--light-purple-1));
     background-size: 200% 200%;
     animation: gradient 15s ease infinite;
 }
@@ -213,7 +208,7 @@ main>div {
 ::-webkit-scrollbar {
     width: 12px;
     /* background-color: #F5F5F5; */
-    background: linear-gradient(-45deg, #97D9E1, #D9AFD9, #97D9E1, #D9AFD9);
+    /* background: linear-gradient(-45deg, #97D9E1, #D9AFD9, #97D9E1, #D9AFD9); */
     background-size: 200% 200%;
     animation: gradient 15s ease infinite;
 }

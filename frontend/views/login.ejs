@@ -1,23 +1,31 @@
-<aside class="aside"><h1 style="font-size: large; color: white;">This is Login</h1></aside>
 <main class="main">
+    <div class="login-heading">
+        <h3>- Login </h3>
+    </div>
     <div class="login-form">
-        <h3>Login</h3>
+        <br><br>
+        <hr>
         <form action="/login" method="POST">
-            <div>
-                <label for="username"><strong>Username</strong></label>
-                <input type="text" name="username" id="username" placeholder="Enter Username" autocomplete="off" autofill="off">
+            <div class="text">
+                Pick up from where you left off! 😊
             </div>
-            <div>
-                <label for="password"><strong>Password</strong></label>
-                <input type="password" name="password" id="password" placeholder="Enter Password" autocomplete="off" autofill="off">
+            <div class="wrapper">
+                <div>
+                    <label for="username"><strong>Username</strong></label>
+                    <input type="text" name="username" id="username" placeholder="Enter Username">
+                </div>
+                <div>
+                    <label for="password"><strong>Password</strong></label>
+                    <input type="password" name="password" id="password" placeholder="Enter Password" autocomplete="off"
+                        autofill="off">
+                </div>
             </div>
 
-            <div>
-                <input type="submit" value="Login" class="formBtn">
-                <input type="reset" value="reset" class="formBtn">
+            <div class="formBtn">
+                <input type="submit" value="Login" id="submitBtn">
+                <input type="reset" value="reset" id="resetBtn">
             </div>
-
-            <div>Dont have an account ? <a href="/signup">Signup</a></div>
+            <div id="signupTarget">Dont have an account? <a href="/signup">Signup</a></div>
         </form>
     </div>
 </main>
