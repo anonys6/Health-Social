@@ -2,7 +2,7 @@ require('dotenv').config();
 
 //Importing packages
 const http = require('http');
-const {Server} = require('socket.io');
+const { Server } = require('socket.io');
 const express = require('express');
 const expressLayout = require('express-ejs-layouts');
 const cookieParser = require('cookie-parser');
@@ -24,7 +24,7 @@ const PORT = process.env.PORT || 8080;
 app.use(express.static('frontend/public'));
 
 //Adding middleware
-app.use(express.urlencoded({extended:true})); //To pass data through forms
+app.use(express.urlencoded({ extended: true })); //To pass data through forms
 app.use(express.json());
 app.use(cookieParser());
 app.use(methodOverride('_method'));
@@ -56,7 +56,7 @@ io.on('connection', (socket) => {
 });
 
 //Establishing connection to DB and running the server
-connectDB().then(()=>{
+connectDB().then(() => {
     server.listen(PORT, () => {
         console.log(`App listening at port ${PORT}`);
         console.log(`URL: http://localhost:${PORT}`);
