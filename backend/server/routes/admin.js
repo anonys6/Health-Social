@@ -114,7 +114,6 @@ router.post('/login', async(req,res)=>{
         const token = jwt.sign({userId:loginUser._id}, jwtSecret);
         res.cookie('token', token, {httpOnly: true});
         
-        // return res.status(200).json({message:'logged in'});
         res.redirect('/home');
     } catch(error){
         console.log(error);
@@ -126,7 +125,7 @@ router.post('/login', async(req,res)=>{
 router.get('/logout', (req,res)=>{
     res.clearCookie('token');
     // res.send({message:'Logged out'});
-    res.redirect('/');
+    res.redirect('/login');
 });
 
 
