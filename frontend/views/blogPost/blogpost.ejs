@@ -1,10 +1,69 @@
+<head>
+    <script src="https://kit.fontawesome.com/1fa877e563.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/blogpost.css">
+</head>
+
 <main>
-    <div class="blogpost">
-        <h1>
-            <%= data.title %>
-        </h1>
-        <article>
-            <%= data.content %>
-        </article>
-    </div>
+
+    <section class="blog-hero">
+        <div class="blog-links">
+            <a href="/blogs" class="btn btn-back">Back to Blog</a>
+        </div>
+        <div class="blog-heading">
+            <h1>
+                <%= data.title %>
+            </h1>
+        </div>
+    </section>
+
+
+    <section class="blog-content">
+        <div class="left-side">
+            <h3>Share:</h3>
+            <ul class="share-links">
+                <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-x-twitter"></i></i></a></li>
+                <li><a href="#"><i class="fa-solid fa-link"></i></a></li>
+            </ul>
+        </div>
+        <div class="right-side">
+            <pre>
+                <article>
+                    <%= data.content %>
+                </article>
+            </pre>
+        </div>
+    </section>
+
 </main>
+
+
+<!-- <script>
+
+    window.addEventListener('scroll', function () {
+        const blogContent = document.querySelector('.blog-content');
+        const sectionPosition = blogContent.getBoundingClientRect().top;
+        const animationDuration = 500; // adjust the duration as needed
+
+        // Calculate the margin values based on the scroll position
+        let marginLeft = 4; // Initial margin value
+        let marginRight = 4; // Initial margin value
+
+        // If the section is within the viewport, calculate the margin
+        if (sectionPosition < window.innerHeight && sectionPosition > -200) {
+            const ratio = (window.innerHeight - sectionPosition) / (window.innerHeight + 200);
+            marginLeft = 4 - (ratio * 4);
+            marginRight = 4 - (ratio * 4);
+        } else if (sectionPosition <= -200) {
+            marginLeft = 0;
+            marginRight = 0;
+        }
+
+        // Apply the animation using CSS transitions
+        blogContent.style.transition = `margin-left ${animationDuration}ms, margin-right ${animationDuration}ms`;
+        blogContent.style.marginLeft = `${marginLeft}rem`;
+        blogContent.style.marginRight = `${marginRight}rem`;
+    });
+
+</script> -->
