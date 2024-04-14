@@ -216,10 +216,14 @@ router.delete('/delete-blogpost/:id', authMiddleware, async(req, res)=>{
     }
 });
 
-
-
-
-
+/**********BMI ****************/
+router.get('/bmi', (req, res) => {
+    try {
+        res.render('bmi/bmi');
+    } catch (error) {
+        console.log(error);
+    }
+});
 
 
 

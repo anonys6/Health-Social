@@ -1,227 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BMI - Health Social</title>
-
-    <script src="https://kit.fontawesome.com/1fa877e563.js" crossorigin="anonymous"></script>
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="/css/home-style.css">
     <link rel="stylesheet" href="/css/bmi.css">
-    <script src="/js/bmi.js" defer></script>
 </head>
-
 <body>
-    <div class="row row-1240">
-        <div class="container-bmi">
-            <h4 class="breadcrumb">Diet & Weight Calculator</h4>
-            <div class="box box-subnav">
-                <img src="https://source.unsplash.com/128x32/?logo" alt="food" class="img-subnav">
-                <h3 class="title-subnav">BMI Calculator</h3>
-            </div>
-
-            <div class="box box-hero">
-                <h1 class="hero--header">BMI Calculator</h1>
-                <p class="hero--sub-header">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores a fugiat saepe eveniet delectus
-                    eligendi harum fugit, asperiores recusandae consequuntur quisquam iusto, laborum dolorum corrupti!
-                    Saepe et alias consequatur! Minus, magni labore natus laborum molestias nostrum! Suscipit
-                    laudantium, ducimus, libero similique sapiente quia totam asperiores repudiandae incidunt laboriosam
-                    dolorem exercitationem.
-                </p>
-            </div>
-
-            <div class="box box-calc">
-                <img src="https://source.unsplash.com/70x70/?icon" alt="weight" class="calc--icon">
-                <h3 class="calc--header">Calculate Your BMI</h3>
-            </div>
-
-            <div class="box box-form">
-                <form action="/bmi" method="POST" class="form">
-                    <div class="form-group">
-                        <div class="calc--height">
-                            <label for="height">Height (cm)</label>
-                            <input type="number" id="height" name="height" placeholder="0 cm">
-                        </div>
-                        <div class="calc--weight">
-                            <label for="weight">Weight (Kg)</label>
-                            <input type="number" id="weight" name="weight" placeholder="0 kg">
-                        </div>
-                        <button type="submit" class="btn btn-calc">Calculate</button>
-                    </div>
-                </form>
-                <div class="box box-result">
-                    <div class="bmi-result">
-                        <h2>Your Body Mass Index</h2>
-                        <p class="bmi-result-para">0</p>
-                    </div>
-                    <div class="bmi-result-info">
-                        <div class="result-info">
-                            <img src="https://source.unsplash.com/95x160/?person" alt="weight" class="result--icon">
-                            <div class="result-info-text">
-                                <p>Underweight</p>
-                                <p>Less than 18.5</p>
-                            </div>
-                        </div>
-                        <div class="result-info">
-                            <img src="https://source.unsplash.com/95x160/?person" alt="weight" class="result--icon">
-                            <div class="result-info-text">
-                                <p>Normal</p>
-                                <p>18.5 - 24.9</p>
-                            </div>
-                        </div>
-                        <div class="result-info">
-                            <img src="https://source.unsplash.com/95x160/?person" alt="weight" class="result--icon">
-                            <div class="result-info-text">
-                                <p>Overweight</p>
-                                <p>25 - 29.9</p>
-                            </div>
-                        </div>
-                        <div class="result-info">
-                            <img src="https://source.unsplash.com/95x160/?person" alt="weight" class="result--icon">
-                            <div class="result-info-text">
-                                <p>Obese</p>
-                                <p>30 or more</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-
-        <div class="container-about">
-            <div class="about-empty"></div>
-            <div class="box-about">
-                <h3 class="about--header">About BMI</h3>
-                <p class="about--para">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores a fugiat saepe eveniet delectus
-                    eligendi harum fugit, asperiores recusandae consequuntur quisquam iusto, laborum dolorum corrupti!
-                    Saepe et alias consequatur! Minus, magni labore natus laborum molestias nostrum! Suscipit
-                    laudantium, ducimus, libero similique sapiente quia totam asperiores repudiandae incidunt laboriosam
-                    dolorem exercitationem.
-                </p>
-                <h3 class="about--header">Glossary</h3>
-                <div class="box-about--item">
-                    <i class="fas fa-angle-down"></i>
-                    <div class="glossary--item">
-                        <h4 class="glossary--header">BMI</h4>
-                        <p class="glossary--para">Body Mass Index</p>
-                    </div>
-                </div>
-                <div class="box-about--item">
-                    <i class="fas fa-angle-down"></i>
-                    <div class="glossary--item">
-                        <h4 class="glossary--header">BMI</h4>
-                        <p class="glossary--para">Body Mass Index</p>
-                    </div>
-                </div>
-                <div class="box-about--item">
-                    <i class="fas fa-angle-down"></i>
-                    <div class="glossary--item">
-                        <h4 class="glossary--header">BMI</h4>
-                        <p class="glossary--para">Body Mass Index</p>
-                    </div>
-                </div>
-                <div class="box-about--item">
-                    <i class="fas fa-angle-down"></i>
-                    <div class="glossary--item">
-                        <h4 class="glossary--header">BMI</h4>
-                        <p class="glossary--para">Body Mass Index</p>
-                    </div>
-                </div>
-                <div class="box-about--item">
-                    <i class="fas fa-angle-down"></i>
-                    <div class="glossary--item">
-                        <h4 class="glossary--header">BMI</h4>
-                        <p class="glossary--para">Body Mass Index</p>
-                    </div>
-                </div>
-                <div class="box-about--item">
-                    <i class="fas fa-angle-down"></i>
-                    <div class="glossary--item">
-                        <h4 class="glossary--header">BMI</h4>
-                        <p class="glossary--para">Body Mass Index</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-
-
-        <div class="box-recommendation">
-            <div class="box-recommendation-heading">
-                <h3 class="recommendation--header">Recommendation</h3>
-            </div>
-
-            <div class="box-recommendation-item">
-                <div class="recommendation--item">
-                    <a href="#">
-                        <h2 class="recommendation--header">Underweight</h2>
-                        <p class="recommendation--para">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                            Quaerat, nulla?</p>
-                    </a>
-                </div>
-            </div>
-            <div class="box-recommendation-item">
-                <div class="recommendation--item">
-                    <a href="#">
-                        <h2 class="recommendation--header">Underweight</h2>
-                        <p class="recommendation--para">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                            Quaerat, nulla?</p>
-                    </a>
-                </div>
-            </div>
-            <div class="box-recommendation-item">
-                <div class="recommendation--item">
-                    <a href="#">
-                        <h2 class="recommendation--header">Underweight</h2>
-                        <p class="recommendation--para">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                            Quaerat, nulla?</p>
-                    </a>
-                </div>
-            </div>
-            <div class="box-recommendation-item">
-                <div class="recommendation--item">
-                    <a href="#">
-                        <h2 class="recommendation--header">Underweight</h2>
-                        <p class="recommendation--para">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                            Quaerat, nulla?</p>
-                    </a>
-                </div>
-            </div>
-            <div class="box-recommendation-item">
-                <div class="recommendation--item">
-                    <a href="#">
-                        <h2 class="recommendation--header">Underweight</h2>
-                        <p class="recommendation--para">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                            Quaerat, nulla?</p>
-                    </a>
-                </div>
-            </div>
-            <div class="box-recommendation-item">
-                <div class="recommendation--item">
-                    <a href="#">
-                        <h2 class="recommendation--header">Underweight</h2>
-                        <p class="recommendation--para">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                            Quaerat, nulla?</p>
-                    </a>
-                </div>
-            </div>
-
-        </div>
-
-
-
-
-
-
-
+  <form name="bmiForm">
+    <div class="bmi-calculator">
+      <h1 style="margin-bottom: 1em;">Calculate your BMI</h1>
+      <div class="bmi-calculator-weight">
+        <input class="weight-slider" name="realweight" id="myWeight" type="range" min="25" max="180" value="60" />
+        <p style="margin-top: 1.8em;">
+          WEIGHT:
+          <input name="Teža" id="inputWeight" type="number" value="60" min="25" max="180" oninput="showValWeight(this.value)" />
+          <span id="weight"></span> kg
+        </p>
+      </div>
+      <div class="bmi-calculator-height">
+        <input class="height-slider" name="realheight" id="myHeight" type="range" min="100" max="220" value="160">
+        <p style="margin-top: 1.8em;">
+          HEIGHT:
+          <input name="Višina" id="inputHeight" type="number" value="160" min="100" max="220" oninput="showValHeight(this.value)" />
+          <span id="height"></span> cm
+        </p>
+      </div>
+      <input class="gumb" type="button" value="Calculate" onclick="calculateBmi()" style="margin-top: 0.5em">
+      <p style="margin-top: 1em;font-size: 1.2em;">
+        <strong>Your BMI:</strong>
+        <span id="yourbmi" style="font-size: 1.2em;margin-left: 8px;"></span>
+      </p>
+      <p></p>
+      <p>
+        <span id="evaluationMessage"></span>
+      </p>
     </div>
-
-
+  </form>
+    <script src="/js/bmi.js"></script>
 </body>
-
 </html>
