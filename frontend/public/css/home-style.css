@@ -590,12 +590,25 @@ div#tsparticles {
 }
 
 /******************** BLOG POST ******************/
+.blogpost {
+    background-color: var(--white);
+    border-radius: 2rem;
+    color: var(--black);
+    padding: 2rem;
+}
+
 .blogpost h1 {
     font-size: 5rem;
+    margin-bottom: 2rem;
 }
 
 .blogpost article{
     font-size: 3rem;
+}
+
+.blogpost article pre{
+    width: 100%;
+    white-space: pre-wrap;
 }
 
 /****************** ADD BLOG POST ****************/

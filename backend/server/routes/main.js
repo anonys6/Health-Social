@@ -7,25 +7,18 @@ const blogpost = require('../models/blogpost');
 //Layouts
 const indexLayout = '../views/layouts/index-layout';
 const chatLayout = '../views/layouts/chat-layout';
+const mainLayout = '../views/layouts/main';
 
 //Routes
 //GET - ROOT/INDEX
 router.get('/', (req, res) => {
     try {
-        res.render('index', {layout: indexLayout});
+        res.render('login', {layout: mainLayout});
     } catch (error) {
         console.log(error);
     }
 });
 
-//GET - HOME
-// router.get('/home', authMiddleware, (req,res)=>{
-//     try{
-//         res.render('home');
-//     } catch(error){
-//         console.log(error);
-//     }
-// });
 
 //GET - BMI
 router.get('/bmi', (req, res) => {
