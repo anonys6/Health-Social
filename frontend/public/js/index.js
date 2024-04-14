@@ -15,17 +15,20 @@
 //     }
 // });
 
+
+
+
 $(document).ready(function () {
     
                 
-    $(".navbar").waypoint(function (direction) {
-        if (direction == "down") {
-            $(".navbar").addClass('navbar-sticky animate-nav-down');
-        }
-        else {
-            $(".navbar").removeClass('navbar-sticky animate-nav-down');
-        }
-    });
+    // $(".navbar").waypoint(function (direction) {
+    //     if (direction == "down") {
+    //         $(".navbar").addClass('navbar-sticky animate-nav-down');
+    //     }
+    //     else {
+    //         $(".navbar").removeClass('navbar-sticky animate-nav-down');
+    //     }
+    // });
 
 
     

@@ -9,7 +9,7 @@
     --black: #000000;
 
     --bg-black: #181818;
-    --bg-black-2 : #232325;
+    --bg-black-2: #232325;
 
     --bg-purple-1: #380356;
     --dark-purple-1: #6b0078;
@@ -29,7 +29,7 @@
 
 
 /*********************** RESET ***********************/
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -53,13 +53,16 @@ li {
     list-style: none;
 }
 
-input::placeholder, textarea::placeholder {
+input::placeholder,
+textarea::placeholder {
     font-family: var(--poppins);
 }
 
-input,textarea {
+input,
+textarea {
     font-family: var(--poppins);
 }
+
 /* ROWS */
 /* .row {
     margin: 0 auto;
@@ -68,6 +71,28 @@ input,textarea {
 .row-1340 {
     max-width: 1340px;
 } */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*********************** MAIN ***********************/
@@ -94,6 +119,23 @@ body {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*************** NAVIGATION BAR ***************/
 
 .navbar {
@@ -116,13 +158,13 @@ body {
     gap: 3rem;
 }
 
-.navbar--list li:last-child  a{
+.navbar--list li:last-child a {
     border: 1px solid var(--light-purple-2);
     border-radius: 50px;
     padding: 1.2rem 2.2rem;
 }
 
-.navbar--list li:last-child a:hover{
+.navbar--list li:last-child a:hover {
     border: 1px solid var(--light-purple-2);
     background-color: var(--light-purple-2);
     color: var(--white);
@@ -144,7 +186,7 @@ body {
     transition: all ease-in .2s;
 }
 
-.navbar--list>li>a:hover{
+.navbar--list>li>a:hover {
     text-decoration: underline
 }
 
@@ -158,7 +200,7 @@ body {
     align-items: center;
     justify-content: space-between;
     /*background-color: rgba(0, 0, 0, 0.3);*/
-    background-color: #241f26; 
+    background-color: #241f26;
     /* padding: 2rem 1.6rem 2rem 5rem; */
     border-radius: 5rem;
     border: none;
@@ -170,20 +212,24 @@ body {
     height: 70px;  */
 }
 
+
+
 @keyframes nav-animation-down {
     0% {
         max-width: 100%;
         margin: 0 auto;
     }
+
     100% {
         max-width: 75%;
         margin: 0 auto;
     }
 }
+
 .animate-nav-down {
-    animation-name: nav-animation-down; 
-    animation-duration: 0.5s; 
-    animation-timing-function: ease; 
+    animation-name: nav-animation-down;
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
     animation-fill-mode: forwards;
 }
 
@@ -194,6 +240,34 @@ body {
     animation-fill-mode: forwards;
 } */
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*********************** MAIN ***********************/
 main {
     margin: 15rem 5rem 0 5rem;
@@ -201,28 +275,28 @@ main {
 }
 
 /*********************** LOGIN ***********************/
-.login-heading{
+.login-heading {
     font-size: 6rem;
     font-family: var(--lora);
     margin: 20rem 0;
     margin-left: 17.5%;
 }
 
-.login-form{
+.login-form {
     background-color: var(--white);
     margin: 10rem 0 5rem 0;
     border-radius: 2rem;
 }
 
-.border-left{
+.border-left {
     border-left: 2px solid var(--light-purple-1);
 }
 
-.hr-wrapper{
+.hr-wrapper {
     margin-top: 1rem;
 }
 
-.login-form hr{
+.login-form hr {
     border: none;
     height: 2px;
     background-color: var(--light-purple-1);
@@ -231,10 +305,12 @@ main {
 }
 
 @keyframes fadeIn {
-    0%{
+    0% {
         opacity: 0;
         transform: translateX(-100vw);
-    } 100%{
+    }
+
+    100% {
         opacity: 1;
         transform: translateX(0vw);
     }
@@ -244,7 +320,7 @@ main {
     animation: fadeIn 2s ease-in-out forwards;
 }
 
-.login-form form{
+.login-form form {
     display: flex;
     flex-direction: column;
     padding: 2rem;
@@ -253,7 +329,7 @@ main {
 }
 
 
-.login-form form .text{
+.login-form form .text {
     font-size: 7rem;
     color: var(--black);
     margin: 7rem 3rem 10rem 0;
@@ -263,28 +339,28 @@ main {
 
 
 
-.login-form form .wrapper{
+.login-form form .wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem 10rem;
     opacity: 0;
 }
 
-.login-form form .wrapper div{
+.login-form form .wrapper div {
     display: flex;
     align-items: center;
     gap: 10rem;
     justify-content: space-between;
 }
 
-.login-form form label{
+.login-form form label {
     font-size: 2rem;
     margin: 1rem 0;
     max-width: fit-content;
 }
 
 
-.login-form form .wrapper input{
+.login-form form .wrapper input {
     margin: 1rem 0;
     padding: 1rem 2rem;
     width: 22vw;
@@ -294,14 +370,16 @@ main {
 }
 
 @keyframes opacity {
-    0%{
+    0% {
         opacity: 0;
-    } 100% {
+    }
+
+    100% {
         opacity: 1;
     }
 }
 
-.opacity{
+.opacity {
     animation: opacity 1.5s ease forwards;
 }
 
@@ -326,28 +404,28 @@ main {
 }
 
 /*********************** SIGNUP ***********************/
-.signup-heading{
+.signup-heading {
     font-size: 6rem;
     font-family: var(--lora);
     margin: 20rem 0;
     margin-left: 17.5%;
 }
 
-.signup-form{
+.signup-form {
     background-color: var(--white);
     margin: 10rem 0 5rem 0;
     border-radius: 2rem;
 }
 
-.border-left{
+.border-left {
     border-left: 2px solid var(--light-purple-1);
 }
 
-.hr-wrapper{
+.hr-wrapper {
     margin-top: 1rem;
 }
 
-.signup-form hr{
+.signup-form hr {
     border: none;
     height: 2px;
     background-color: var(--light-purple-1);
@@ -356,10 +434,12 @@ main {
 }
 
 @keyframes fadeIn {
-    0%{
+    0% {
         opacity: 0;
         transform: translateX(-100vw);
-    } 100%{
+    }
+
+    100% {
         opacity: 1;
         transform: translateX(0vw);
     }
@@ -369,7 +449,7 @@ main {
     animation: fadeIn 2s ease-in-out forwards;
 }
 
-.signup-form form{
+.signup-form form {
     display: flex;
     flex-direction: column;
     padding: 2rem;
@@ -378,7 +458,7 @@ main {
 }
 
 
-.signup-form form .text{
+.signup-form form .text {
     font-size: 7rem;
     color: var(--black);
     margin: 7rem 3rem 10rem 0;
@@ -388,29 +468,31 @@ main {
 
 
 
-.signup-form form .wrapper{
+.signup-form form .wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem 10rem;
     opacity: 0;
 }
 
-.signup-form form .wrapper div{
+.signup-form form .wrapper div {
     display: flex;
     align-items: center;
     gap: 10rem;
     justify-content: space-between;
 }
 
-.signup-form form label{
+.signup-form form label {
     font-size: 2rem;
     margin: 1rem 0;
     max-width: fit-content;
 }
 
-pre {font-family: var(--poppins);}
+pre {
+    font-family: var(--poppins);
+}
 
-.signup-form form .wrapper input{
+.signup-form form .wrapper input {
     margin: 1rem 0;
     padding: 1rem 2rem;
     width: 22vw;
@@ -419,11 +501,11 @@ pre {font-family: var(--poppins);}
     border-radius: 5rem;
 }
 
-.signup-form form input[type="file"]{
+.signup-form form input[type="file"] {
     display: none;
 }
 
-.custom-file-upload{
+.custom-file-upload {
     cursor: pointer;
     border: 1px solid var(--grey-3);
     display: inline-block;
@@ -433,7 +515,7 @@ pre {font-family: var(--poppins);}
 
 
 /******************** FORM BUTTONS **********************/
-.formBtn{
+.formBtn {
     display: flex;
     margin-top: 5rem;
     gap: 5rem;
@@ -461,7 +543,7 @@ pre {font-family: var(--poppins);}
 
 
 /*********************** FOOTER ***********************/
-.footer{
+.footer {
     background-color: var(--bg-black-2);
     margin-top: 10rem;
     color: #ffffff;
@@ -469,18 +551,18 @@ pre {font-family: var(--poppins);}
     background-color: var(--bg-black);
 }
 
-.footer-content{
+.footer-content {
     position: relative;
     height: 500px;
     padding: 10rem;
 }
 
-.footer-content .heading{
+.footer-content .heading {
     font-size: 3rem;
     margin-bottom: 2rem;
 }
 
-.footer-content .links{
+.footer-content .links {
     position: absolute;
     z-index: 10;
     border: 1px solid white;
@@ -489,7 +571,7 @@ pre {font-family: var(--poppins);}
     gap: 5rem;
 }
 
-.links a:hover{
+.links a:hover {
     text-decoration: underline;
 
 }
@@ -521,7 +603,7 @@ div#tsparticles {
     font-family: var(--lora);
 }
 
-.blogs-wrapper #addNewButton a{
+.blogs-wrapper #addNewButton a {
     font-size: 3rem;
     color: var(--white);
     border: 1px solid var(--white);
@@ -529,7 +611,7 @@ div#tsparticles {
     border-radius: 5rem;
 }
 
-#addNewButton a:hover{
+#addNewButton a:hover {
     background-color: var(--light-purple-2);
     transition: transform 0.3s ease;
 }
@@ -540,7 +622,7 @@ div#tsparticles {
     transform: scale(1.5);
 }
 
-#addNewButton a:hover span{
+#addNewButton a:hover span {
     transform: rotate(90deg) scale(1.5);
 }
 
@@ -570,7 +652,7 @@ div#tsparticles {
     gap: 5rem;
 }
 
-.blog-buttons .btn{
+.blog-buttons .btn {
     border: 1px solid var(--light-purple-1);
     border-radius: 2rem;
     font-size: 2rem;
@@ -594,7 +676,7 @@ div#tsparticles {
     font-size: 5rem;
 }
 
-.blogpost article{
+.blogpost article {
     font-size: 3rem;
 }
 
@@ -631,7 +713,7 @@ div#tsparticles {
     height: 4rem;
 }
 
-.addBlogPost .btn{
+.addBlogPost .btn {
     padding: 1rem 4rem;
     border-radius: 5rem;
     cursor: pointer;
@@ -666,17 +748,18 @@ div#tsparticles {
     0% {
         transform: translateX(2px);
     }
+
     100% {
         transform: translateX(-10px);
     }
 }
 
-.editBlogPost .heading .backButton:hover span{
+.editBlogPost .heading .backButton:hover span {
     display: inline-block;
     animation: arrow 0.5s ease 2 forwards;
 }
 
-.editBlogPost .heading input{
+.editBlogPost .heading input {
     background-color: var(--light-purple-1);
     border: none;
     color: var(--white);
@@ -684,16 +767,17 @@ div#tsparticles {
     cursor: pointer;
 }
 
-.editBlogPost .heading .deleteBtn:hover span{
+.editBlogPost .heading .deleteBtn:hover span {
     transform: rotate(135deg) scale(1.5);
 }
+
 .editBlogPost .heading .deleteBtn span {
     transform: rotate(45deg) scale(1.5);
     transition: transform 0.3s ease;
     display: inline-block;
 }
 
-.editBlogPost .heading .deleteBtn{
+.editBlogPost .heading .deleteBtn {
     font-size: 3rem;
     padding: 1rem 2rem;
     border-radius: 5rem;
@@ -723,7 +807,7 @@ div#tsparticles {
     height: 4rem;
 }
 
-.editBlogPost input.btn{
+.editBlogPost input.btn {
     font-size: 2rem;
     padding: 0rem 4rem;
     border-radius: 5rem;
@@ -732,4 +816,3 @@ div#tsparticles {
     background-color: var(--light-purple-1);
     color: var(--white);
 }
-
