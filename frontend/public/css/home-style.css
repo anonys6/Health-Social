@@ -99,22 +99,15 @@ body {
 .navbar {
     display: flex;
     align-items: center;
-    width: 147.5rem;
+    width: 92vw;
     justify-content: space-between;
     background-color: rgba(128, 0, 128, 0.2);
-    /* opacity: .7; */
     padding: 2rem 1.6rem 2rem 5rem;
     border-radius: 5rem;
     border: 1px solid white;
     transition: all .5s ease;
-
-    
-    position: fixed;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-
-    z-index: 10;
+    margin: 0 auto;
+    /* z-index: 10; */
 }
 
 .navbar--list {
@@ -164,19 +157,42 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /*background-color: rgba(0, 0, 0, 0.3);
-    background-color: #241f26;*/
-    padding: 2rem 1.6rem 2rem 5rem;
+    /*background-color: rgba(0, 0, 0, 0.3);*/
+    background-color: #241f26; 
+    /* padding: 2rem 1.6rem 2rem 5rem; */
     border-radius: 5rem;
     border: none;
 
     position: fixed;
     top: 25px;
-    left: 200px;
+    /* left: 200px;
     width: 100%;
-    height: 50px; /* or whatever height you want */
+    height: 70px;  */
 }
 
+@keyframes nav-animation-down {
+    0% {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    100% {
+        max-width: 75%;
+        margin: 0 auto;
+    }
+}
+.animate-nav-down {
+    animation-name: nav-animation-down; 
+    animation-duration: 0.5s; 
+    animation-timing-function: ease; 
+    animation-fill-mode: forwards;
+}
+
+/* .animate-nav-up {
+    animation-name: nav-animation-down; 
+    animation-duration: 0.5s; 
+    animation-timing-function: ease-out; 
+    animation-fill-mode: forwards;
+} */
 
 /*********************** MAIN ***********************/
 main {
@@ -710,9 +726,6 @@ div#tsparticles {
 .editBlogPost input.btn{
     font-size: 2rem;
     padding: 0rem 4rem;
-    /* display: flex;
-    align-self: center;
-    justify-content: center; */
     border-radius: 5rem;
     margin: auto;
     cursor: pointer;
