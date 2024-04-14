@@ -63,6 +63,12 @@ textarea {
     font-family: var(--poppins);
 }
 
+a,
+button {
+    cursor: pointer;
+    line-height: 1 !important;
+}
+
 /* ROWS */
 /* .row {
     margin: 0 auto;
@@ -629,7 +635,8 @@ div#tsparticles {
 .blogs-content {
     background-color: var(--white);
     border-radius: 2rem;
-    margin: 5rem 0;
+    margin: 7rem 0 5rem;
+    padding: 5rem 0;
 }
 
 .blogs li {
@@ -644,7 +651,11 @@ div#tsparticles {
 .blog-title {
     text-decoration: underline;
     color: black;
-    font-size: 4rem;
+    font-size: 3.2rem;
+}
+
+.blog-title:hover {
+    color: var(--light-purple-1);
 }
 
 .blog-buttons {
@@ -658,6 +669,8 @@ div#tsparticles {
     font-size: 2rem;
     color: var(--light-purple-1);
     cursor: pointer;
+    line-height: 1;
+    padding: 1rem 2rem;
 
 }
 
@@ -677,7 +690,7 @@ div#tsparticles {
 .addBlogPost {
     background-color: var(--bg-black);
     border-radius: 2rem;
-    padding: 2rem 4rem;
+    padding: 8rem 4rem;
 }
 
 .addBlogPost .heading {
@@ -704,6 +717,15 @@ div#tsparticles {
 
 .addBlogPost form div input {
     height: 4rem;
+    padding-left: 1rem;
+    border-radius: 1rem;
+    outline: none;
+}
+
+.addBlogPost form div textarea {
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    outline: none;
 }
 
 .addBlogPost .btn {
@@ -712,6 +734,7 @@ div#tsparticles {
     cursor: pointer;
     background-color: var(--light-purple-1);
     color: var(--white);
+    line-height: 0;
 }
 
 
