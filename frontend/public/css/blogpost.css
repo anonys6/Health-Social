@@ -74,7 +74,7 @@ li {
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 8rem 0;
+    padding-bottom: 10rem;
 }
 
 .blog-links {
