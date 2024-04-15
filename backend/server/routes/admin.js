@@ -217,7 +217,7 @@ router.delete('/delete-blogpost/:id', authMiddleware, async(req, res)=>{
 });
 
 /**********BMI ****************/
-router.get('/bmi', (req, res) => {
+router.get('/bmi', authMiddleware, (req, res) => {
     try {
         res.render('bmi/bmi');
     } catch (error) {

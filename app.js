@@ -28,14 +28,14 @@ app.use(express.urlencoded({ extended: true })); //To pass data through forms
 app.use(express.json());
 app.use(cookieParser());
 app.use(methodOverride('_method'));
-app.use(session({
-    secret: 'keyboard cat',
-    resave: false,
-    saveUninitialized: true,
-    store: MongoStore.create({
-        mongoUrl: process.env.MONGODB_URI
-    })
-}))
+// app.use(session({
+//     secret: 'keyboard cat',
+//     resave: false,
+//     saveUninitialized: true,
+//     store: MongoStore.create({
+//         mongoUrl: process.env.MONGODB_URI
+//     })
+// }))
 
 //Templating engines and layouts
 app.use(expressLayout);

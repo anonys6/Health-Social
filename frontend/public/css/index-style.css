@@ -80,14 +80,13 @@ li {
 
 
 
-/* NAVIGATION BAR */
 
-.navbar {
+/* .navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: rgba(128, 0, 128, 0.2);
-    /* opacity: .7; */
+    opacity: .7;
     padding: 2rem 1.6rem 2rem 5rem;
     border-radius: 5rem;
     border: 1px solid white;
@@ -102,7 +101,7 @@ li {
     width: 100%;
     height: 100%;
     backdrop-filter: blur(20px);
-    /* adjust as needed */
+   
     z-index: -1;
 }
 
@@ -147,7 +146,7 @@ li {
 
 
 
-/*********************** STICKY NAVBAR ***********************/
+
 .navbar-sticky {
     margin: 0 auto;
     max-width: 75%;
@@ -158,7 +157,12 @@ li {
     padding: 2rem 1.6rem 2rem 5rem;
     border-radius: 5rem;
     border: none;
-}
+}  */
+
+
+
+
+
 
 
 /* body {
@@ -192,7 +196,7 @@ body {
     background: linear-gradient(-45deg, var(--bg-black), var(--light-purple-1), var(--bg-black), var(--light-purple-1));
     background-size: 200% 200%;
     animation: gradient 15s ease infinite;
-    padding: 2rem 4rem 0;
+    /* padding: 2rem 4rem 0; */
 }
 
 @keyframes gradient {
@@ -272,7 +276,9 @@ main>div {
 }
 
 .section--our-platform {
-    margin-top: 2rem;
+    margin-top: -10rem;
+    /* margin-top: 2rem; */
+    margin-bottom: 10rem;
     padding: 4.8rem 4.2rem;
 }
 
@@ -339,4 +345,52 @@ main>div {
     display: flex;
     justify-content: flex-start;
     gap: 3rem;
+}
+
+
+/************************ FOOTER ***********************/
+.footer {
+    background-color: var(--bg-black-2);
+    margin-top: 10rem;
+    color: #ffffff;
+    border-top-left-radius: 15rem;
+    background-color: var(--bg-black);
+}
+
+.footer-content {
+    position: relative;
+    height: 500px;
+    padding: 10rem;
+}
+
+.footer-content .heading {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.footer-content .links {
+    position: absolute;
+    z-index: 10;
+    border: 1px solid white;
+    display: flex;
+    font-size: 1.5rem;
+    gap: 5rem;
+}
+
+.links a:hover {
+    text-decoration: underline;
+
+}
+
+.info {
+    margin-top: 15rem;
+}
+
+/***********************PARTICLES***********************/
+
+div#tsparticles {
+    position: absolute;
+    top: 0;
+    width: calc(100% - 10rem);
+    border-top-left-radius: 15rem;
 }
